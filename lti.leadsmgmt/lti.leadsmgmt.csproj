@@ -53,7 +53,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{9d19e741-5720-4548-831c-0c6b599ca8fa}</FeatureId>
+    </None>
     <None Include="key.snk" />
+    <None Include="news\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d586dd9b-9eb2-49d4-8928-e0810d064cdc}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{d7f45a2e-584c-47d9-adb2-84fbc8504300}</PackageId>
     </None>
@@ -61,8 +67,12 @@
       <DependentUpon>Package.package</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="news\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
