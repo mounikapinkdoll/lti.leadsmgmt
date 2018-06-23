@@ -53,8 +53,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="CompanyList\CompanyListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e2c042ca-3d3b-48e6-b486-bba9001b1d82}</SharePointProjectItemId>
+    </None>
+    <None Include="CompanyList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{120e320d-a01b-4695-aa22-dd14809f71e1}</SharePointProjectItemId>
+    </None>
+    <None Include="ConntactList\ConntactListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{51926b3b-8ed4-467d-9646-99f931aea4b9}</SharePointProjectItemId>
+    </None>
+    <None Include="ConntactList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8b740c41-c3a8-46dd-9924-87b2b316d55f}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\CompanyListFeature\CompanyListFeature.feature">
       <FeatureId>{9d19e741-5720-4548-831c-0c6b599ca8fa}</FeatureId>
+    </None>
+    <None Include="Features\ContactListFeature\ContactListFeature.feature">
+      <FeatureId>{bec759be-20a0-4f65-894d-30da0375788d}</FeatureId>
     </None>
     <None Include="key.snk" />
     <None Include="news\SharePointProjectItem.spdata">
@@ -69,8 +84,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <Content Include="CompanyList\CompanyListInstance\Elements.xml" />
+    <Content Include="CompanyList\Elements.xml" />
+    <Content Include="CompanyList\Schema.xml" />
+    <Content Include="ConntactList\ConntactListInstance\Elements.xml" />
+    <Content Include="ConntactList\Elements.xml" />
+    <Content Include="ConntactList\Schema.xml" />
+    <Content Include="Features\CompanyListFeature\CompanyListFeature.Template.xml">
+      <DependentUpon>CompanyListFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ContactListFeature\ContactListFeature.Template.xml">
+      <DependentUpon>ContactListFeature.feature</DependentUpon>
     </Content>
     <Content Include="news\Elements.xml" />
   </ItemGroup>

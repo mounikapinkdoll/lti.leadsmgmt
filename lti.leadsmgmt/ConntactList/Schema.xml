@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ConntactList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ConntactList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100bd2cf293680943f5a53c8022c21a4992" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{1c3d2df5-cd2e-4713-b325-2e2f0800fd26}" Name="FTxhbv" /><FieldRef ID="{70241247-bf5e-4694-9f5e-513a37d872de}" Name="Title1" /><FieldRef ID="{22426d3f-cc4e-44ae-a827-b4eee3ed695a}" Name="Email" /><FieldRef ID="{441cc3bf-62d0-4547-b283-181c1c863137}" Name="Phone" /><FieldRef ID="{2a464df1-44c1-4851-949d-fcd270f0ccf2}" Name="CellPhone" /><FieldRef ID="{C814B2CF-84C6-4f56-B4A4-C766938A97C5}" Name="ol_Department" /><FieldRef ID="{c9aca366-4441-41d6-88cb-98b1df603eea}" Name="Tfdyg" /><FieldRef ID="{82f51ed1-90d6-4e01-a369-6e55f5a08d05}" Name="LinkedIn" /><FieldRef ID="{d498583a-1d3a-4d57-bea8-aace37530d18}" Name="Facebook" /><FieldRef ID="{ED095CF7-534E-460b-965F-F14269E70F5A}" Name="DisplayTemplateJSTargetContentType" /><FieldRef ID="{c2576148-2086-4530-abf5-8ac70644a6a0}" Name="Notes1" /><FieldRef ID="{1DAB9B48-2D1A-47b3-878C-8E84F0D211BA}" Name="_Status" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="ContactName" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="FTxhbv" ID="{1c3d2df5-cd2e-4713-b325-2e2f0800fd26}" DisplayName="Company" Type="Lookup" Required="TRUE" List="CompanyList" ShowField="CompanyName" /><Field Name="Title1" ID="{70241247-bf5e-4694-9f5e-513a37d872de}" DisplayName="Title" Type="Text" Required="TRUE" /><Field Name="Email" ID="{22426d3f-cc4e-44ae-a827-b4eee3ed695a}" DisplayName="Email" Type="Text" Required="TRUE" /><Field Name="Phone" ID="{441cc3bf-62d0-4547-b283-181c1c863137}" DisplayName="Phone" Type="Text" /><Field ID="{2a464df1-44c1-4851-949d-fcd270f0ccf2}" Name="CellPhone" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="CellPhone" Group="$Resources:core,Person_Event_Columns;" DisplayName="$Resources:core,Mobile_Phone;" Type="Text" IMEMode="inactive" Required="TRUE" /><Field ID="{C814B2CF-84C6-4f56-B4A4-C766938A97C5}" Name="ol_Department" StaticName="ol_Department" SourceID="http://schemas.microsoft.com/sharepoint/v3" DisplayName="$Resources:core,Department_OL;" Group="$Resources:core,Person_Event_Columns;" Type="Text" Sealed="TRUE" AllowDeletion="TRUE" /><Field Name="Tfdyg" ID="{c9aca366-4441-41d6-88cb-98b1df603eea}" DisplayName="Picture" Type="URL" /><Field Name="LinkedIn" ID="{82f51ed1-90d6-4e01-a369-6e55f5a08d05}" DisplayName="LinkedIn" Type="URL" Required="TRUE" /><Field Name="Facebook" ID="{d498583a-1d3a-4d57-bea8-aace37530d18}" DisplayName="Facebook" Type="URL" /><Field ID="{ED095CF7-534E-460b-965F-F14269E70F5A}" Name="DisplayTemplateJSTargetContentType" DisplayName="Twitter" Description="$Resources:core,DisplayTemplateJSTargetContentType_Desc;" Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;" Type="Text" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DisplayTemplateJSTargetContentType" AllowDeletion="FALSE" /><Field Name="Notes1" ID="{c2576148-2086-4530-abf5-8ac70644a6a0}" DisplayName="Notes" Type="Text" /><Field ID="{1DAB9B48-2D1A-47b3-878C-8E84F0D211BA}" Name="_Status" Group="$Resources:core,Document_Columns;" Type="Choice" DisplayName="$Resources:core,Status;" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" StaticName="_Status" FillInChoice="TRUE"><CHOICES><CHOICE>to contact</CHOICE><CHOICE>contacted</CHOICE><CHOICE>regular</CHOICE></CHOICES><Default>$Resources:core,_Status_NotStarted;</Default></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="FTxhbv" /><FieldRef Name="Title1" /><FieldRef Name="Email" /><FieldRef Name="Phone" /><FieldRef Name="CellPhone" /><FieldRef Name="ol_Department" /><FieldRef Name="Tfdyg" /><FieldRef Name="LinkedIn" /><FieldRef Name="Facebook" /><FieldRef Name="Notes1" /><FieldRef Name="_Status" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
